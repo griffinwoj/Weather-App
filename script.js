@@ -1,4 +1,4 @@
-var GeolocationCoordinates = "http://api.openweathermap.org/geo/1.0/direct?q=London&limit=1&appid=5c24ae42624e82bc2dd372d2ce2a5afc";
+var GeolocationCoordinates = "http://api.openweathermap.org/geo/1.0/direct?q=London&limit=1&units=standard&appid=5c24ae42624e82bc2dd372d2ce2a5afc";
 fetch(GeolocationCoordinates).then(function (response) {
     console.log(response);
     return response.json();
@@ -14,15 +14,15 @@ function getWeather(latitude, longitude) {
         console.log(response);
         return response.json();
     }).then(function (data) {
-        console.log(data)
-        console.dir(data.list)
-        console.log(data.list[0])
-        console.log(data.list[0].main.temp)
-        console.log(data.list[0].weather[0].description)
-        console.log(data.list[0].weather[0].icon)
-        console.log(data.list[0].dt_txt)
-        console.log(data.list[0].main.temp_min)
-        console.log(data.list[0].main.temp_max)
+        // console.log(data)
+        // console.dir(data.list)
+        // console.log(data.list[0])
+        // console.log(data.list[0].main.temp)
+        // console.log(data.list[0].weather[0].description)
+        // console.log(data.list[0].weather[0].icon)
+        // console.log(data.list[0].dt_txt)
+        // console.log(data.list[0].main.temp_min)
+        // console.log(data.list[0].main.temp_max)
 
         // update HTML elements to display weather data
         const temp = document.querySelector('#temp');
