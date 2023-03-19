@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js" defer></script>
+</head>
+<header>
+  <h1>Weather Dashboard</h1>
+</header>
+<body>
+  <main>
+
+    <div class="card">
+      <div class="search">
+        <input type="text" class="search-bar">
+          <button id="button">Search</button>
+      </div>
+
+      <section class="weather-loading">
+        <h2 class="city"></h2>
+        <h1 class="temp"></h1>
+        <div class="flex">
+          <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+          <div class="description"></div>
+        <div class="humidity"></div>
+        <div class="wind"></div>
+      </div>
+    </div>
+
+    <section class="weather">
+      <h2>Current Weather</h2>
+      <div class="location-name" class id ="forecast-item"></div>
+        <img src="" alt="" class="icon" />
+        <p>Temperature: <span class="temp" class id="temp"></span></p>
+        <p>Conditions: <span class="summary" class id="description"></span></p>
+      </div>
+    </section>
+    <section class="forecast">
+      <h2>5-Day Forecast</h2>
+      <div class="forecast-item">
+          <h2>Monday</h2>
+          <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+          <p>Temperature: <span class="temp" class id="temp"></span></p>
+          <p>Conditions: <span class="summary" class id="description"></span></p>      
+        </div>
+        <div class="forecast-item">
+          <h2>Tuesday</h2>
+          <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+          <p>Temperature: <span class="temp" class id="temp"></span></p>
+          <p>Conditions: <span class="summary" class id="description"></span></p>
+          
+        </div>
+      <div class="forecast-item">
+        <h2>Wednesday</h2>
+        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+        <p>Temperature: <span class="temp" class id="temp"></span></p>
+        <p>Conditions: <span class="summary" class id="description"></span></p>
+        
+
+      </div>
+      <div class="forecast-item">
+        <h2>Thursday</h2>
+        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+        <p>Temperature: <span class="temp" class id="temp"></span></p>
+        <p>Conditions: <span class="summary" class id="description"></span></p>
+        
+
+      </div>
+      <div class="forecast-item">
+        <h2>Friday</h2>
+        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+        <p>Temperature: <span class="temp" class id="temp"></span></p>
+        <p>Conditions: <span class="summary" class id="description"></span></p>
+        
+
+      </div>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/en-gb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/en-au.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/en-ca.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/en-nz.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/en-ie.min.js"></script>
+<script src="./script.js"></script>
+
+</body>
+
+</html
