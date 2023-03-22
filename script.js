@@ -30,13 +30,13 @@ function getWeather(latitude, longitude) {
         console.log(data)
         console.dir(data.list)
         console.log(data.list[0])
-       
-        // update HTML elements to display weather data
-        const temp = document.querySelector('#temp');
-        temp.textContent = data.list[0].main.temp;
 
-        const description = document.querySelector('#description');
-        description.textContent = data.list[0].weather[0].description;
+        // update HTML elements to display weather data
+        // const temp = document.querySelector('#temp');
+        // temp.textContent = data.list[0].main.temp;
+
+        // const description = document.querySelector('#description');
+        // description.textContent = data.list[0].weather[0].description;
 
         const icon = document.querySelector('.icon');
         icon.src = `http://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`;
@@ -44,24 +44,46 @@ function getWeather(latitude, longitude) {
         // const dt_txt = document.querySelector('#dt_txt');
         // dt_txt.textContent = data.list[0].dt_txt;
         // console.log(dt_txt.textContent)
-        const temp_min = document.querySelector('#temp_min');
-        temp_min.textContent = data.list[0].main.temp_min;
         const wind = document.querySelector('#wind');
         const humidity = document.querySelector('#humidity');
         humidity.textContent = data.list[0].main.humidity;
         wind.textContent = data.list[0].wind.speed;
         const mon = document.querySelector('#temp_mon');
         mon.textContent = data.list[8].main.temp;
+        const mWind = document.querySelector('#mWind');
+        mWind.textContent = data.list[8].wind.speed;
+        const mHumidity = document.querySelector('#mHumidity');
+        mHumidity.textContent = data.list[8].main.humidity;
         //above from monday
         //below from tuesday
         const tue = document.querySelector('#temp_tue');
         tue.textContent = data.list[16].main.temp;
+        const tHumidity = document.querySelector('#tHumidity');
+        tHumidity.textContent = data.list[16].main.humidity;
+        const tWind = document.querySelector('#tWind');
+        tWind.textContent = data.list[16].wind.speed;
         //below from wednesday
         const wed = document.querySelector('#temp_wed');
-        wed.textContect = data.list[24].main.temp;
+        wed.textContent = data.list[24].main.temp;
+        const wHumidity = document.querySelector('#wHumidity');
+        wHumidity.textContent = data.list[24].main.humidity;
+        const wWind = document.querySelector('#wWind');
+        wWind.textContent = data.list[24].wind.speed;
         //this could be a for loop
         const thur = document.querySelector('#temp_thur');
-        
+        thur.textContent = data.list[32].main.temp;
+        const thHumidity = document.querySelector('#thHumidity');
+        thHumidity.textContent = data.list[32].main.humidity;
+        const thWind = document.querySelector('#thWind');
+        thWind.textContent = data.list[32].wind.speed;
+        //below from friday
+        const fri = document.querySelector('#temp_fri');
+        fri.textContent = data.list[38].main.temp;
+        const fHumidity = document.querySelector('#fHumidity');
+        fHumidity.textContent = data.list[38].main.humidity;
+        const fWind = document.querySelector('#fWind');
+        fWind.textContent = data.list[38].wind.speed;
+        //below from saturday
     });
 }
 

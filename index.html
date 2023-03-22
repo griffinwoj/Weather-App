@@ -11,15 +11,16 @@
 <header>
   <h1>Weather Dashboard</h1>
 </header>
+
 <body>
   <main>
     <div class="card">
       <div class="search">
         <input type="text" class="search-bar">
-          <button id="button">Search</button>
+        <button id="button">Search</button>
       </div>
-    
-<!-- 
+
+      <!-- 
       <section class="weather-loading">
         <h2 class="city"></h2>
         <h1 class="temp"></h1>
@@ -31,55 +32,57 @@
       </div>
     </div> -->
 
-    <section class="weather">
-      <h2>Current Weather</h2>
-      <div class="location-name" class id ="forecast-item"></div>
+      <section class="weather">
+        <h2>Current Weather</h2>
+        <div class="location-name" class id="forecast-item"></div>
         <img src="" alt="" class="icon" />
-        <p>Temperature: <span class="temp" id="temp_min"></span></p>
-        <p>humidity <span class="summary"  id="humidity"></span></p>
-        <p>Wind: <span class="wind" id="wind"></span></p>    
+        <p>Temperature: <span class="temp" id="temp"></span></p>
+        <p>humidity <span class="summary" id="humidity"></span></p>
+        <p>Wind: <span class="wind" id="wind"></span></p>
         <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-      </div>
+    </div>
     </section>
     <section class="forecast">
       <h2>5-Day Forecast</h2>
       <div class="forecast-item">
-          <h2>Monday</h2>
-          <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-          <p>Temperature: <span class="temp" id="temp_mon"></span></p>
-          <p>Conditions: <span class="summary" class id="description"></span></p> 
-          
-          <p>Wind: <span class="wind" id="wind"></span></p>    
-        </div>
-        <div class="forecast-item">
-          <h2>Tuesday</h2>
-          <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-          <p>Temperature: <span class="temp"  id="temp_tue"></span></p>
-          <p>Conditions: <span class="summary" class id="description"></span></p>
-          
-        </div>
+        <h2>Monday</h2>
+        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+        <p>Temperature: <span class="temp" id="temp_mon"></span></p>
+        <p>humidity <span class="summary" id="mHumidity"></span></p>
+        <p>Wind: <span class="wind" id="mWind"></span></p>
+      </div>
+      <div class="forecast-item">
+        <h2>Tuesday</h2>
+        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+        <p>Temperature: <span class="temp" id="temp_tue"></span></p>
+        <p>humidity <span class="summary" id="tHumidity"></span></p>
+        <p>Wind: <span class="wind" id="tWind"></span></p>
+
+      </div>
       <div class="forecast-item">
         <h2>Wednesday</h2>
         <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
         <p>Temperature: <span class="temp" id="temp_wed"></span></p>
-        <p>Conditions: <span class="summary" class id="description"></span></p>
-        
+        <p>humidity <span class="summary" id="wHumidity"></span></p>
+        <p>Wind: <span class="wind" id="wWind"></span></p>
+
 
       </div>
       <div class="forecast-item">
         <h2>Thursday</h2>
         <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-        <p>Temperature: <span class="temp" class id="temp"></span></p>
-        <p>Conditions: <span class="summary" class id="description"></span></p>
-        
+        <p>Temperature: <span class="temp" id="temp_thur"></span></p>
+        <p>humidity <span class="summary" id="thHumidity"></span></p>
+        <p>Wind: <span class="wind" id="thWind"></span></p>
+
 
       </div>
       <div class="forecast-item">
         <h2>Friday</h2>
         <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-        <p>Temperature: <span class="temp" class id="temp"></span></p>
-        <p>Conditions: <span class="summary" class id="description"></span></p>
-        
+        <p>Temperature: <span class="temp" id="temp_fri"></span></p>
+        <p>humidity <span class="summary" id="fHumidity"></span></p>
+        <p>Wind: <span class="wind" id="fWind"></span></p>
 
       </div>
     </section>
