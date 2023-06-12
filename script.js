@@ -1,20 +1,21 @@
 const button = document.querySelector('#button');
-// async function getGeoData() {
 
-//     var GeolocationCoordinates = "http://api.openweathermap.org/geo/1.0/direct?q=Londonlimit=1&units=standard&appid=5c24ae42624e82bc2dd372d2ce2a5afc";
-//     const request = await fetch(GeolocationCoordinates);
-//     const response = await request.json();
+async function getGeoData() {
+  const GeolocationCoordinates = "http://api.openweathermap.org/geo/1.0/direct?q=London&limit=1&units=standard&appid=5c24ae42624e82bc2dd372d2ce2a5afc";
+  const request = await fetch(GeolocationCoordinates);
+    const data = await request.json();
+    console.log(data);
+    getWeather(data[0].lat, data[0].lon);
+}
 
-//     console.log(response);
-// }
 
-// fetch(GeolocationCoordinates).then(function (response) {
-//     console.log(response);
-//     return response.json();
-// }).then(function (data) {
-//     console.log(data)
-//     getWeather(data[0].lat, data[0].lon)
-// });
+fetch(GeolocationCoordinates).then(function (response) {
+    console.log(response);
+    return response.json();
+}).then(function (data) {
+    console.log(data)
+    getWeather(data[0].lat, data[0].lon)
+});
 
 function getWeather(latitude, longitude) {
     // console.log(latitude, longitude)
@@ -99,52 +100,52 @@ button.addEventListener('click', async function () {
     // console.log(data);
     getWeather(data[0].lat, data[0].lon);
 });
-// let city = document.querySelector('.city');
-// let weather = {
-//     "appKey": "5c24ae42624e82bc2dd372d2ce2a5afc",
-//     fetchWeather: function (city) {
-//         fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=standard&appid=5c24ae42624e82bc2dd372d2ce2a5afc"
-//         )
-//             .then((response) => {
-//                 if (!response.ok) {
-//                     alert("No weather found.");
-//                     throw new Error("No weather found.");
-//                 }
-//                 return response.json();
-//             })
-//             .then((data) => this.displayWeather(data));
-//     },
-//     displayWeather: function (data) {
-//         const { name } = data;
-//         const { icon, description } = data.weather[0];
-//         const { temp, humidity } = data.main;
-//         const { speed } = data.wind;
-//         document.querySelector(".city").innerText = "Weather in " + name;
-//         document.querySelector(".icon").src =
-//             "https://openweathermap.org/img/wn/" + icon + ".png";
-//         document.querySelector(".description").innerText = description;
-//         document.querySelector(".temp").innerText = temp + "°C";
-//         document.querySelector(".humidity").innerText =
-//             "Humidity: " + humidity + "%";
-//         document.querySelector(".wind").innerText =
-//             "Wind speed: " + speed + " km/h";
-//         document.querySelector(".weather").classList.remove("loading");
-//     },
-//     search: function () {
-//         this.fetchWeather(document.querySelector(".search-bar").value);
-//     },
-// };
+let city = document.querySelector('.city');
+let weather = {
+    "appKey": "5c24ae42624e82bc2dd372d2ce2a5afc",
+    fetchWeather: function (city) {
+        fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=standard&appid=5c24ae42624e82bc2dd372d2ce2a5afc"
+        )
+            .then((response) => {
+                if (!response.ok) {
+                    alert("No weather found.");
+                    throw new Error("No weather found.");
+                }
+                return response.json();
+            })
+            .then((data) => this.displayWeather(data));
+    },
+    displayWeather: function (data) {
+        const { name } = data;
+        const { icon, description } = data.weather[0];
+        const { temp, humidity } = data.main;
+        const { speed } = data.wind;
+        document.querySelector(".city").innerText = "Weather in " + name;
+        document.querySelector(".icon").src =
+            "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".description").innerText = description;
+        document.querySelector(".temp").innerText = temp + "°C";
+        document.querySelector(".humidity").innerText =
+            "Humidity: " + humidity + "%";
+        document.querySelector(".wind").innerText =
+            "Wind speed: " + speed + " km/h";
+        document.querySelector(".weather").classList.remove("loading");
+    },
+    search: function () {
+        this.fetchWeather(document.querySelector(".search-bar").value);
+    },
+};
 
-// document.querySelector(".search button").addEventListener("click", function () {
-//     weather.search();
-// });
+document.querySelector(".search button").addEventListener("click", function () {
+    weather.search();
+});
 
-// document
-//     .querySelector(".search-bar")
-//     .addEventListener("keyup", function (event) {
-//         if (event.key == "Enter") {
-//             weather.search();
-//         }
-//     });
+document
+    .querySelector(".search-bar")
+    .addEventListener("keyup", function (event) {
+        if (event.key == "Enter") {
+            weather.search();
+        }
+    });
 
-// weather.fetchWeather("");
+weather.fetchWeather("");

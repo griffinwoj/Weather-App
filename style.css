@@ -1,7 +1,7 @@
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 body {
@@ -30,10 +30,12 @@ header {
 	border-radius: 16px;
 
 }
+
 h2 {
 	margin: 0;
 	font-size: 36px;
 }
+
 .card {
 	display: flex;
 	flex-direction: column;
@@ -41,15 +43,16 @@ h2 {
 }
 
 .forecast-item {
-    height: 20rem;
-    width: 15rem;
+	height: 20rem;
+	width: 15rem;
 	margin: 1rem;
-    background-color: rgb(132, 173, 211);
-    text-align: center;
-    padding-top: 12px;
-    border-radius: 16px;
+	background-color: rgb(132, 173, 211);
+	text-align: center;
+	padding-top: 12px;
+	border-radius: 16px;
 
 }
+
 .weather-loading {
 	flex-direction: column;
 	align-items: center;

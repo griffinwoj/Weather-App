@@ -2,104 +2,126 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Whats Up? Weather</title>
 </head>
-<header>
-  <h1>Weather Dashboard</h1>
-</header>
 
 <body>
-  <main>
-    <div class="card">
-      <div class="search">
-        <input type="text" class="search-bar">
-        <button id="button">Search</button>
-      </div>
-
-      <!-- 
-      <section class="weather-loading">
-        <h2 class="city"></h2>
-        <h1 class="temp"></h1>
-        <div class="flex">
-          <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-          <div class="description"></div>
-        <div class="humidity"></div>
-        <div class="wind"></div>
-      </div>
-    </div> -->
-
-      <section class="weather">
-        <h2>Current Weather</h2>
-        <div class="location-name" class id="forecast-item"></div>
-        <img src="" alt="" class="icon" />
-        <p>Temperature: <span class="temp" id="temp"></span></p>
-        <p>humidity <span class="summary" id="humidity"></span></p>
-        <p>Wind: <span class="wind" id="wind"></span></p>
-        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-    </div>
+  <header id="header" class="container">
+    <h1>Whats Up? Weather</h1>
+  </header>
+  <input type="text" id="search-input">
+  <button id="search-button">Search</button>
+  <div id="search-history">
+    <h2>Search History:</h2>
+    <ul id="city-history">
+    </ul>
+  </div>
+  <main id="weather-box" class="container">
+    <section class="row justify-center">
+      <!-- Current Weather DAY Display Box -->
+      <article class="card-column">
+        <figure class="card-block">
+          <h2 class="header-block">Current Weather Forecast</h2>
+          <aside class="weather-block">
+            <p id="cityday"></p>
+            <p id="cityname"></p>
+            <a href="https://openweathermap.org/img/wn/10d@2x.png" target=""><img id="weather-icon"
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt="Current Date and Weather displayed for the searched city which includes: Temperature, Humidity, and Wind."></a>
+            <p id="temp">Temperature:</p>
+            <p id="humid">Humidity:</p>
+            <p id="wind">Wind:</p>
+          </aside>
+        </figure>
+      </article>
     </section>
-    <section class="forecast">
-      <h2>5-Day Forecast</h2>
-      <div class="forecast-item">
-        <h2>Monday</h2>
-        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-        <p>Temperature: <span class="temp" id="temp_mon"></span></p>
-        <p>humidity <span class="summary" id="mHumidity"></span></p>
-        <p>Wind: <span class="wind" id="mWind"></span></p>
-      </div>
-      <div class="forecast-item">
-        <h2>Tuesday</h2>
-        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-        <p>Temperature: <span class="temp" id="temp_tue"></span></p>
-        <p>humidity <span class="summary" id="tHumidity"></span></p>
-        <p>Wind: <span class="wind" id="tWind"></span></p>
-
-      </div>
-      <div class="forecast-item">
-        <h2>Wednesday</h2>
-        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-        <p>Temperature: <span class="temp" id="temp_wed"></span></p>
-        <p>humidity <span class="summary" id="wHumidity"></span></p>
-        <p>Wind: <span class="wind" id="wWind"></span></p>
-
-
-      </div>
-      <div class="forecast-item">
-        <h2>Thursday</h2>
-        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-        <p>Temperature: <span class="temp" id="temp_thur"></span></p>
-        <p>humidity <span class="summary" id="thHumidity"></span></p>
-        <p>Wind: <span class="wind" id="thWind"></span></p>
-
-
-      </div>
-      <div class="forecast-item">
-        <h2>Friday</h2>
-        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-        <p>Temperature: <span class="temp" id="temp_fri"></span></p>
-        <p>humidity <span class="summary" id="fHumidity"></span></p>
-        <p>Wind: <span class="wind" id="fWind"></span></p>
-
-      </div>
+    <!-- Start: (5) Day Weather Forecast -->
+    <!-- Day: One -->
+    <section class="row">
+      <article class="card-column">
+        <figure class="card-block">
+          <h2 class="header-block">One Day Forecast</h2>
+          <aside class="weather-block">
+            <p id="cityday1"></p>
+            <p id="cityname"></p>
+            <a href="https://openweathermap.org/img/wn/10d@2x.png" target=""><img id="weather-icon1"
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt="One Day away weather forecast, displayed for the searched city which includes: City, Date, Weather Icon, Temperature, Humidity, and Wind."></a>
+            <p id="temp1">Temperature:</p>
+            <p id="humid1">Humidity:</p>
+            <p id="wind1">Wind:</p>
+          </aside>
+        </figure>
+      </article>
+      <!-- Day: Two -->
+      <article class="card-column">
+        <figure class="card-block">
+          <h2 class="header-block">Two Day Forecast</h2>
+          <aside class="weather-block">
+            <p id="cityday2"></p>
+            <p id="cityname"></p>
+            <a href="https://openweathermap.org/img/wn/10d@2x.png" target=""><img id="weather-icon2"
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt="Two Day's away weather forecast, displayed for the searched city which includes: City, Date, Weather Icon, Temperature, Humidity, and Wind."></a>
+            <p id="temp2">Temperature:</p>
+            <p id="humid2">Humidity:</p>
+            <p id="wind2">Wind:</p>
+          </aside>
+        </figure>
+      </article>
+      <!-- Day: Three -->
+      <article class="card-column">
+        <figure class="card-block">
+          <h2 class="header-block">Three Day Forecast</h2>
+          <aside class="weather-block">
+            <p id="cityday3"></p>
+            <a href="https://openweathermap.org/img/wn/10d@2x.png" target=""><img id="weather-icon3"
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt="Three Day's away weather forecast, displayed for the searched city which includes: City, Date, Weather Icon, Temperature, Humidity, and Wind."></a>
+            <p id="temp3">Temperature:</p>
+            <p id="humid3">Humidity:</p>
+            <p id="wind3">Wind:</p>
+          </aside>
+        </figure>
+      </article>
+      <!-- Day: Four -->
+      <article class="card-column">
+        <figure class="card-block">
+          <h2 class="header-block">Four Day Forecast</h2>
+          <aside class="weather-block">
+            <p id="cityday4"></p>
+            <a href="https://openweathermap.org/img/wn/10d@2x.png" target=""><img id="weather-icon4"
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt="Four Day's away weather forecast, displayed for the searched city which includes: City, Date, Weather Icon, Temperature, Humidity, and Wind."></a>
+            <p id="temp4">Temperature:</p>
+            <p id="humid4">Humidity:</p>
+            <p id="wind4">Wind:</p>
+          </aside>
+        </figure>
+      </article>
+      <!-- Day: Five -->
+      <article class="card-column">
+        <figure class="card-block">
+          <h2 class="header-block">Five Day Forecast</h2>
+          <aside class="weather-block">
+            <p id="cityday5"></p>
+            <a href="https://openweathermap.org/img/wn/10d@2x.png" target=""><img id="weather-icon5"
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt="Five Day's away weather forecast, displayed for the searched city which includes: City, Date, Weather Icon, Temperature, Humidity, and Wind."></a>
+            <p id="temp5">Temperature:</p>
+            <p id="humid5">Humidity:</p>
+            <p id="wind5">Wind:</p>
+          </aside>
+        </figure>
+      </article>
     </section>
+    </footer>
   </main>
-  <footer>
-
-  </footer>
+  <script src="script.js"></script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/en-gb.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/en-au.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/en-ca.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/en-nz.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/en-ie.min.js"></script>
-<script src="./script.js"></script>
-
-</body>
-
-</html
+</html>
