@@ -1,49 +1,7 @@
 body {
-	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
-  }
-  
-  header {
-	background-color: #3366CC;
-	color: #FFFFFF;
-	text-align: center;
-	padding: 20px;
-  }
-  
-  main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-  }
-  
-  .weather, .forecast-item, .weather-loading {
-	height: 20rem;
-	width: 15rem;
-	margin: 1rem;
-	background-color: rgb(132, 173, 211);
-	text-align: center;
-	padding-top: 12px;
-	border-radius: 16px;
-  }
-  
-  .weather-loading {
-	background-color: rgb(167, 190, 211);
-  }
-  
-  h2 {
-	margin: 0;
-	font-size: 36px;
-  }
-  
-  .card {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-  }
-  body {
-	margin: auto;
-	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	font-family: Arial, sans-serif;
 	overflow: auto;
 	background: linear-gradient(
 	  315deg,
@@ -69,13 +27,89 @@ body {
 	}
   }
   
+  .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  #header {
+	background-color: #3366cc;
+	color: #ffffff;
+	text-align: center;
+	padding: 20px;
+  }
+  
+  #search-input {
+	margin-top: 20px;
+	padding: 10px;
+  }
+  
+  #search-button {
+	background-color: #3366cc;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 10px;
+	cursor: pointer;
+  }
+  
+  #search-history {
+	text-align: center;
+	margin-top: 20px;
+  }
+  
+  #city-history {
+	list-style-type: none;
+	padding: 0;
+  }
+  
+  .row {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+  }
+  
+  .card-column {
+	margin: 10px;
+  }
+  
+  .card-block {
+	text-align: center;
+  }
+  
+  .header-block {
+	margin: 0;
+	font-size: 24px;
+  }
+  
+  .weather-block {
+	margin-top: 20px;
+  }
+  
+  .weather-block p {
+	margin: 8px 0;
+  }
+  
+  .weather-block img {
+	max-width: 100px;
+  }
+  
+  .footer {
+	text-align: center;
+	margin-top: 20px;
+  }
+  
   .wave {
 	background: rgb(255 255 255 / 25%);
 	border-radius: 1000% 1000% 0 0;
 	position: fixed;
 	width: 200%;
 	height: 12em;
-	animation: wave 10s -3s linear infinite;
 	transform: translate3d(0, 0, 0);
 	opacity: 0.8;
 	bottom: 0;
@@ -99,19 +133,15 @@ body {
 	2% {
 	  transform: translateX(1);
 	}
-  
 	25% {
 	  transform: translateX(-25%);
 	}
-  
 	50% {
 	  transform: translateX(-50%);
 	}
-  
 	75% {
 	  transform: translateX(-25%);
 	}
-  
 	100% {
 	  transform: translateX(1);
 	}
